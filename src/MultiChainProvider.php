@@ -35,7 +35,7 @@ class MultiChainProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../config/config.php' => config_path('multichain.php'),
-        ], 'config');
+        ], 'clarion-config');
 
         $this->app->bind('multichain', function($app) {
             return new MultiChainClient(config('multichain.host'), config('multichain.port'), config('multichain.user'), config('multichain.pass'));
